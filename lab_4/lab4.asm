@@ -1,7 +1,7 @@
 .stack 100h  
 .data
 x db 'Calancea Daniel', 0
-y db 'asdaswqeasdqwjijqirjiasdaCalancea Daniel', 0
+y db 'asdaswqeasdqwjijqirjiasdasda', 0
 notFound db 'String Not Found', 0
 resIndex dw 20 dup(0)
 xlen dw 1 dup(?)
