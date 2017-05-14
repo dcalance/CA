@@ -37,12 +37,10 @@ genEven proc
     mov si, 0
     mov di, 0
     mov cx, 10
-    mov bx, 2
     r1:
         mov ax, x[si]
-        idiv bl
-        cmp ah, 0
-        jne f1
+        test ax, 1
+        jnz f1
         mov ax, x[si]
         mov res[di], ax
         add di, 2
@@ -56,12 +54,10 @@ genOdd proc
     mov si, 0
     mov di, 0
     mov cx, 10
-    mov bx, 2
     r2:
         mov ax, x[si]
-        idiv bl
-        cmp ah, 0
-        je f2
+        test ax, 1
+        jz f2
         mov ax, x[si]
         mov res[di], ax
         add di, 2
