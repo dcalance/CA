@@ -1,7 +1,6 @@
-.model small
 .data
-x dw 1234h
-z dw 1200h
+x dw 1200h
+z dw 1234h
 y dw 1 dup(?)
 
 .code
@@ -27,6 +26,7 @@ greater:
     sub ax, 54
     shr ax, 1
     sub ax, x
+    mov y, ax
 
 final:
     mov ah, 4Ch

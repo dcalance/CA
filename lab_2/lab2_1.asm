@@ -1,8 +1,8 @@
-.model small
 .data
 x dw 5 dup(?)
 a db 0FFh
 b db 0h
+sm dw 1 dup(?)
 
 .code
 start:
@@ -30,6 +30,15 @@ rec:
     mov dx, ax
     add si, 2
     loop rec    
+
+mov cx, 5
+mov si, 0
+mov ax, 0    
+sum:
+    add ax, x[si]
+    add si, 2
+    loop sum
+mov sm, ax
     
 mov ah, 4Ch
 int 21h

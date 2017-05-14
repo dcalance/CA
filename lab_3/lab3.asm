@@ -1,5 +1,5 @@
 .data
-x dw 1h, -2h, -2h, -1h, -1h, -1h, -2h, -2h ,-1h, -1h
+x dw 1h, 2h, -2h, 1h, 1h, 1h, 2h, 2h , 1h, -1h
 res dw 10 dup(?)
 
 .code
