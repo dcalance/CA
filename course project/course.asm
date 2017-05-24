@@ -128,7 +128,7 @@ loop1:
     mov dl, bl
     and dl, 0Fh
     cmp dl, 0Ah
-    jg letter1
+    jge letter1
     add dl,30h
     jmp finalp 
 letter1:
